@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__image-box header__image-slide header__fade">
+            <img src="img/header-bg-1.jpg" alt="" class="header__image">
+        </div>
+        <div class="header__image-box header__image-slide header__fade">
+            <img src="img/header-bg-2.jpg" alt="" class="header__image">
+        </div>
+        <div class="header__image-box header__image-slide header__fade">
+            <img src="img/header-bg-3.jpg" alt="" class="header__image">
+        </div>
+        <div class="header__image-box header__image-slide header__fade">
+            <img src="img/header-bg-4.jpg" alt="" class="header__image">
+        </div>
+        <div class="header__image-box header__image-slide header__fade">
+            <img src="img/header-bg-5.jpg" alt="" class="header__image">
+        </div>
+        <div class="header__logo-box">
+            <img src="img/Landscape-Logo-nobg.png" alt="" class="header__logo">
+        </div>
+    </header>
+</body>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("header__image-slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 10000); // Change image every 2 seconds
+    }
+</script>
+</html>
